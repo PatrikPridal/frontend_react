@@ -42,6 +42,27 @@
 .app__testimonial-content {
     flex: 1;
     height: 100%;
+
+    padding: 0 2rem;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    p {
+        font-size: 1.25rem;
+        line-height: 2rem;
+        color: var(--black-color);
+        font-family: var(--font-base);
+    }
+
+    h4 {
+        font-weight: 10;
+        color: var(--secondary-color);
+        margin-top: 2rem;
+    }
 }
 
 .app__testimonial-brands {
