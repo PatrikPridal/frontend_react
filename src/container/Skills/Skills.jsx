@@ -7,6 +7,8 @@ import { urlFor, client } from "../../client";
 import './Skills.scss';
 
 const Skills = () => {
+  const [experience, setExperience] = useState([]);
+  const [skills, setSkills] = useState([]);
 
   useEffect(() => {
     const query = '*[_type == "experiences"]'
@@ -14,7 +16,7 @@ const Skills = () => {
 
     client.fetch(query)
       .then((data) => {
-        setExperiences(data);
+        setExperience(data);
         
       })
     client.fetch(skillsQuery)
