@@ -10,7 +10,13 @@ import './Footer.scss';
 const Footer = () => {
   return (
     <>
-    
+      <h2 className="head-text">Take a coffe & chat with me</h2>
+
+      <div className="app__footer-cards">
+        <div className="app__footer-card">
+          
+        </div>
+      </div>
     </>
   )
 }
