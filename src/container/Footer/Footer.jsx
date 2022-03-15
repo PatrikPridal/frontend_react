@@ -20,6 +20,23 @@ const Footer = () => {
     setFormData({ ...formData, [name]: value });
   }
 
+  const handleSubmit = (e) => {
+    setLoading(true);
+
+    const contact = {
+      _type: 'contact',
+      name: name,
+      email: email,
+      message: message,
+    }
+
+    client.createContact(contact)
+      .then(() => {
+        setLoading(false);
+        setIsFormSubmitted(true);
+      })
+  }
+
   return (
     <>
       <h2 className="head-text">Take a coffe & chat with me</h2>
