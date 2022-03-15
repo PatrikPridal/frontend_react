@@ -1,5 +1,4 @@
 //external imports
-import React from 'react';
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
@@ -27,9 +26,21 @@ const Testimonial = () => {
     });
   }, []);
 
+  const test = testimonials[currentIndex];
 
   return (
-    <div>Testimonial</div>
+    <>
+      {testimonials.length && (
+        <>
+        <div className="app__testimonial-item app__flex">
+          <img src={urlFor(test.imgurl)} alt="testimonial" />
+          <div className="app__testimonial-content">
+            <p className="p-text">{test.feedback}</p>
+          </div>
+        </div>
+        </>
+        )}
+    </>
   )
 }
 
