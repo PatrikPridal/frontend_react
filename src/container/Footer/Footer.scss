@@ -63,5 +63,46 @@
 .app__footer-form {
     width: 60%;
     flex-direction: column;
-    
+    margin: 1rem 2rem;
+
+    div {
+        width: 100%;
+
+        margin: 0.75rem 0;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: var(--primary-color);
+
+        transition: all 0.3s ease-in-out;
+
+        input, textarea {
+            width: 100%;
+            padding: 0.25rem;
+            border: none;
+            border-radius: 6px;
+            background-color: var(--primary-color);
+
+            font-family: var(--font-base);
+            color: var(--secondary-color);
+            outline: none;
+        }
+
+        textarea {
+            height: 170px;
+        }
+
+        &:hover {
+            box-shadow: 0 0 25px var(--primary-color);
+        }
+    }
+
+    button {
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        border: none;
+        background-color: var(--secondary-color);
+
+        font-weight: 500;
+        color: var(--weight-color);
+    }
 }
